@@ -5,7 +5,10 @@ import { routes } from "./routes";
 const app = express();
 
 //MidleWare
-app.use(cors())
+app.use(cors({
+  origin: '*'
+
+}))
 app.use(express.json());
 app.use(routes)
 
